@@ -29,6 +29,8 @@
       { name: "cookies", quantity: 10 },
       { name: "chips", quantity: 5 },
       { name: "ice creams", quantity: 3 }
+      { name: "coca cola", quantity: 7 }
+      { name: "marshmallows", quantity: 50 }
     ];
     var alreadyBoughtList = [];
 
