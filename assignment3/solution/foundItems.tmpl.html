@@ -1,0 +1,7 @@
+<span ng-transclude ng-if="foundItems.length===0"></span>
+<ul ng-if="foundItems.length>0">
+  <li ng-repeat="item in foundItems">
+    {{item.name + ', ' + item.short_name + ', ' + item.description}}
+    <button type="button" ng-click="onRemove({index: $index})">Don't want this one!</button>
+  </li>
+</ul>
