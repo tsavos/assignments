@@ -3,11 +3,13 @@
   <head>
     <title>Made In China</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 <body ng-app="MenuApp">
-  <h1>Welcome to our Restaurant</h1>
 
 
+  <ui-view></ui-view>
 
   <!-- Libraries -->
   <script type="text/javascript" src="lib\angular.min.js"></script>
@@ -15,6 +17,16 @@
 
   <!-- Modules -->
   <script type="text/javascript" src="src\menuapp\menuapp.module.js"></script>
+  <script type="text/javascript" src="src\data\data.module.js"></script>
+
+  <!-- Data Artifacts -->
+  <script type="text/javascript" src="src\data\menudata.service.js"></script>
+
+  <!-- MenuApp Artifacts -->
+  <script type="text/javascript" src="src\menuapp\categories.component.js"></script>
+  <script type="text/javascript" src="src\menuapp\categories.controller.js"></script>
+  <script type="text/javascript" src="src\menuapp\items.component.js"></script>
+  <script type="text/javascript" src="src\menuapp\items.controller.js"></script>
 
   <!-- Routes -->
   <script type="text/javascript" src="src\routes.js"></script>
