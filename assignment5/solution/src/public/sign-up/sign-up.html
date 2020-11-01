@@ -1,0 +1,30 @@
+<div class="container form">
+  <h2>Sign Up For The Newsletter</h2>
+  <h3>That will never come</h3>
+  <form name="signup" method="post" novalidate>
+    <br/>
+    <label for="firstname">First Name</label>
+    <input type="text" name="firstname" required ng-model="signUpCtrl.signUpData.firstname"/>
+    <span ng-if="signup.firstname.$error.required && signup.firstname.$touched">Please enter a first name</span>
+    <br/>
+    <label for="lastname">Last Name</label>
+    <input type="text" name="lastname" required ng-model="signUpCtrl.signUpData.lastname"/>
+    <span ng-if="signup.lastname.$error.required && signup.lastname.$touched">Please enter a last name</span>
+    <br/>
+    <label for="emailaddress">Email Address</label>
+    <input type="email" name="emailaddress" required ng-model="signUpCtrl.signUpData.emailaddress"/>
+    <span ng-if="signup.emailaddress.$error.required && signup.emailaddress.$touched">Please enter an email address</span>
+    <br/>
+    <label for="phonenumber">Phone Number</label>
+    <input type="text" name="phonenumber" pattern="(\d{3})-(\d{3})-(\d{4})" ng-model="signUpCtrl.signUpData.phonenumber"/>
+    <span ng-if="signup.phonenumber.$invalid && signup.phonenumber.$touched">Phone format should be ###-###-####</span>
+    <br/>
+    <label for="favoritedish">Favorite Dish</label>
+    <input type="text" name="favoritedish" favorite-exist ng-model="signUpCtrl.signUpData.favoritedish"/>
+    <span ng-if="signup.favoritedish.$invalid && signup.favoritedish.$touched">No such menu number exists</span>
+    <br/>
+    <br/>
+    <button ng-disabled="signup.$invalid" ng-click="signUpCtrl.signUp()">Sign Up</button>
+  </form>
+  <h3 ng-if="signUpCtrl.added">Your information has been saved</h3>
+</div>

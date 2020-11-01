@@ -1,0 +1,27 @@
+<div class="container form">
+  <h2>Newsletter Information</h2>
+  <div class="col-md-8">
+    <h4 ng-if="!myInfoCtrl.signUpInfo">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h4>
+    <div ng-if="myInfoCtrl.signUpInfo">
+      <div>First Name: {{myInfoCtrl.signUpInfo.firstname}}</div>
+      <div>Last Name: {{myInfoCtrl.signUpInfo.lastname}}</div>
+      <div>Email Address: {{myInfoCtrl.signUpInfo.emailaddress}}</div>
+      <div>Phone Number: {{myInfoCtrl.signUpInfo.phonenumber}}</div>
+      <br/>
+      <div>Favorite Dish:</div>
+      <div class="menu-item-tile col-md-6" style="border: 3px #557c3e solid;">
+        <br/>
+        <div class="menu-item-description col-sm-7">
+          <h3 class="menu-item-title">{{myInfoCtrl.signUpInfo.favoriteItem.name}}</h3>
+          <p class="menu-item-details">{{myInfoCtrl.signUpInfo.favoriteItem.description}}</p>
+        </div>
+        <div class="menu-item-photo">
+          <div>{{myInfoCtrl.signUpInfo.favoriteItem.short_name}}</div>
+          <img class="img-responsive" width="250" height="150"
+          ng-src="/images/menu_items/{{myInfoCtrl.signUpInfo.favoriteItem.short_name}}.jpg"
+          alt="{{myInfoCtrl.signUpInfo.favoriteItem.name}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
